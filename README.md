@@ -28,14 +28,14 @@ Things you may want to cover:
 |Column|Type|Option|
 |------|----|------|
 |id|integer|
-|address|string|null:false|
+|e-mail|string|null:false|
 |passward|string|null:false|
-|user_name|string|null:false|
+|name|string|null:false|
 
 ### Association
 - has_many : groups through : groups_users
 - has_many : messages
-
+- has_many : groups_users
 
 
 ## message テーブル
@@ -43,8 +43,8 @@ Things you may want to cover:
 |Column|Type|Option|
 |------|----|------|
 |id|integer|------|
-|users_id|integer|
-|groups_id|integer|
+|users_id|integer|null:false.foreign_key: true|
+|groups_id|integer|null: false, foreign_key:true|
 |body|text| 
 |image|string|
 
@@ -59,11 +59,12 @@ Things you may want to cover:
 |Column|Type|Option|
 |------|----|------|
 |id|integer|-----|
-|group_name|string|null:false|
+|name|string|null:false|
 
 ### Association
 - has_many : users through : groups_users
 - has_many : messages
+- has_many : groups_users
 
 
 
