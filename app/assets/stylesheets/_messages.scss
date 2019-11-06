@@ -1,0 +1,124 @@
+.header {
+  
+  
+}
+.contents{
+  box-sizing: border-box;
+  display: block;
+
+  &__left {
+    height: 100vh;
+    background-color: #2f3e51;
+    width: 300px;
+    float: left;
+
+    &__header{
+      align-items: center;
+      box-sizing: border-box;
+      color: #ffffff;
+      display: flex;
+      height: 100px;
+      background-color: #253141;
+      width: 300px;
+      padding-left: 20px;
+      padding-right: 20px;
+
+      &__box{
+        box-sizing: border-box;
+        color: #ffffff;
+        display: flex;
+        font-weight: 700;
+        height: 18px;
+        width: 260px;
+        justify-content: space-between;
+
+        &__name {
+          
+        }
+        &__menu {
+          list-style-position: outside;
+          list-style-image: none;
+          list-style-type: none;
+          display: flex;
+
+          &__new {
+            box-sizing: border-box;
+            color: #ffffff;
+            display: block;
+            margin: 4.8px;
+
+          }
+          &__edit {
+            box-sizing: border-box;
+            color: #ffffff;
+            display: block;
+            margin: 4.8px;
+
+          }
+        }
+      }
+    }
+
+    &__groups {
+      height: 582px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 20px;
+      overflow-x: scroll;
+      overflow-y: scroll;
+
+    }
+  }
+  
+  &__main {
+    height: 100vh;
+    width: 680px;
+    float: left;
+
+    &__header {
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+      border-bottom-color: #ffffff;
+      display: flex;
+      height: 100px;
+      justify-content: space-between;
+      overflow-x: scroll;
+      overflow-y: scroll;
+      padding-left: 40px;
+      padding-right: 40px;
+
+      &__left-box {
+        margin-top: 35px;
+      }
+
+    }
+    &__messages {
+      overflow-x: scroll;
+      overflow-y: scroll;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 46px;
+      padding-bottom: 46px;
+      height: 420px;
+      background-color: #fafafa;
+    }
+
+    &__form {
+      height: 50px;
+      padding-bottom: 20px;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 20px;
+      background-color: #ddd;
+      
+
+      &__new_message {
+        display: flex;
+        height: 50px;
+        background-color: #fff;
+        
+      }
+    }
+  }
+}
+
