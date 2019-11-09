@@ -4,8 +4,8 @@ class UsersController < ApplicationController
   end
 
   def update
-    if current_user.update(user_params)
-      redirect_to root_path
+    if @group.update(group_params)
+      redirect_to group_messages_path(@group), notice: 'グループを編集しました'
     else
       render :edit
     end
@@ -13,7 +13,11 @@ class UsersController < ApplicationController
 
   private
 
-  def user_params
-    parems.require(:user).permit(:name, :email)
+  def group_params
+    params.require(:group).permit(:name, { :user_ids => [] })
+  end
+
+  def set_group
+    @group = Group.find(params[:id])
   end
 end

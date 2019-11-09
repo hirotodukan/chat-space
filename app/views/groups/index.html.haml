@@ -1,51 +1,5 @@
 .header
 
-.contents
-  .contents__left
-    .contents__left__header
-      .contents__left__header__box
-        .contents__left__header__box__name
-          = current_user.name
-        .contents__left__header__box__menu
-          .contents__left__header__box__menu__new
-            = link_to new_group_path do
-              <i class="fas fa-edit"></i>
-          .contents__left__header__box__menu__edit
-            = link_to edit_user_path(current_user) do
-              <i class="fas fa-cog"></i>
-    .contents__left__groups
-      - current_user.groups.each do |group|
-        .group
-          = link_to group_messages_path(group) do
-            .group__name
-              = group.name
-            .group__message
-              メッセージはまだありません。
-  .contents__main
-    .contents__main__header
-      .contents__main__header__left-box
-        .contents__main__header__left-box__group
-          おめでとう
-        .contents__main__header__left-box__list
-          tani
-      .contents__main__header__edit-btn
-        Edit
-    .contents__main__messages
-      .contents__main__messages__message
-        .contents__main__messages__message__info
-          .contents__main__messages__message__info__talker
-            tani
-          .contents__main__messages__message__info__date
-            2019/11/6
-        .contents__main__messages__message__text
-          this
-    .contents__main__form
-      .contents__main__form__new_message
-        .contents__main__form__new_message__input-box
-          .contents__main__form__new_message__input-box__image
-            %label{class: "input-box__image"}
-              %i.fa.fa-image
-        .contents__main__form__new_message__submit
-          send
-    
-    
+.wrapper
+  = render "side_bar.html.haml"
+  = render "main_chat.html.haml"
