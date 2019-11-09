@@ -1,0 +1,57 @@
+.contents{
+  display: block;
+  box-sizing: border-box;
+
+  &__left{
+    background-color: #2f3e51;
+    height: 100vh;
+    display: block;
+    width: 300px;
+    align-items: center;
+    box-sizing: border-box;
+    float: left;
+    color: #ffffff;
+
+    &__groups{
+      padding: 20px 20px 0;
+      height: calc(100vh - 100px);
+      overflow: scroll;
+      color: #ffffff;
+
+      &__group{
+        width: 260px;
+        height: 39px;
+        margin-bottom: 40px;
+        color: #ffffff;
+
+        &__name{
+          width: 260px;
+          height: 17px;
+          margin-bottom: 5px;
+          font-size: 15px;
+          color: #ffffff;
+        }
+
+        &__message{
+          font-size: 11px;
+        }
+      }
+    }
+
+    &__header{
+      background-color: #253141;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+
+      &__box{
+        justify-content: space-between;
+        width: 100%;
+        font-weight: 700;
+        display: flex;
+        color: #ffffff;
+      }
+    }
+  }
+}
