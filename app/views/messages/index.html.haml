@@ -1,0 +1,27 @@
+.wrapper
+  = render "groups/side_bar"
+  
+  .contents
+    .contents__main
+      .contents__main__header
+        .contents__main__header__leftbox
+          .contents__main__header__leftbox__text
+            saaaa
+          .contents__main__header__leftbox__text2
+            aaaa
+        .contents__main__header__rightbox
+          Edit
+          
+      .contents__main__messages
+        = render @messages
+
+      .contents__main__form
+        = form_for [@group, @message] do |f|
+          = f.text_field :content, class: 'contents__main__from__new-message', placeholder: 'type a message'
+          .contents__main__from__new-message__input__box
+            = f.label :image, class: '.contents__main__form__new-message__input__image' do
+              = icon('fas', 'image', class: 'icon')
+              = f.file_field :image, class: 'hidden'
+          = f.submit 'Send', class: 'contents__main__form__new-message__submit'
+            
+
