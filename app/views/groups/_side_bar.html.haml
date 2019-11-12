@@ -8,13 +8,14 @@
           = link_to new_group_path do
             = icon('fas', 'edit', class: 'icon')
         .contents__left__header__box__aikon
-          = link_to edit_group_path(current_user) do
+          = link_to edit_user_path(current_user) do
             = icon('fas', 'cog', class: 'icon')
     .contents__left__groups
       - current_user.groups.each do |group|
         .contents__left__groups__group
-          = link_to groups_path(group) do
+          = link_to group_messages_path(group) do
             .contents__left__groups_group__name
               = group.name
             .contents__left__groups_group__message
-              メッセージはまだありません。
+              = group.show_last_message
+              
