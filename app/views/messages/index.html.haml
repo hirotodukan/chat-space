@@ -6,11 +6,14 @@
       .contents__main__header
         .contents__main__header__leftbox
           .contents__main__header__leftbox__text
-            saaaa
+            =@group.name
           .contents__main__header__leftbox__text2
-            aaaa
+            Menber
+            - @group.users.each do|user|
+              =user.name
         .contents__main__header__rightbox
-          Edit
+          = link_to edit_group_path(current_user) do
+            Edit
           
       .contents__main__messages
         = render @messages
