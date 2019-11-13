@@ -20,11 +20,11 @@
 
       .contents__main__form
         = form_for [@group, @message] do |f|
-          = f.text_field :content, class: 'contents__main__from__new-message', placeholder: 'type a message'
-          .contents__main__from__new-message__input__box
-            = f.label :image, class: '.contents__main__form__new-message__input__image' do
+          = f.text_field :content, class: 'from__message', placeholder: 'type a message'
+          .contents__main__from__mask
+            = f.label :image, class: 'form__mask__image' do
               = icon('fas', 'image', class: 'icon')
               = f.file_field :image, class: 'hidden'
-          = f.submit 'Send', class: 'contents__main__form__new-message__submit'
+          = f.submit 'Send', class: 'form__submit'
             
 
