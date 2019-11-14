@@ -12,11 +12,9 @@ $(function(){
                     <div class="contents__main__messages__data__text">
                     <p class="lower-message__content">
                       ${message.content}
-                    </p>
-                    <div>
                       ${message.image}
-                    </div>
-                  
+                    </p>
+
                   </div>
                 </div>`
     return html;
