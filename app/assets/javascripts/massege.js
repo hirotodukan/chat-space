@@ -1,24 +1,44 @@
 $(function(){
   function buildMessage(message){
-    var html = `<div class="contents__main__messages__data">
-                  <div class="contents__main__messages__data__info">
-                    <div class="contents__main__messages__data__info__talker">
-                      ${message.user_name}
-                    </div>
-                    <div class="contents__main__messages__data__info__date">
-                      ${message.created_at}
-                    </div>
-                    </div>
-                    <div class="contents__main__messages__data__text">
-                    <p class="lower-message__content">
-                      ${message.content}
-                      ${message.image}
-                    </p>
+    if ( message.image ) {
+      var html = `<div class="contents__main__messages__data">
+                    <div class="contents__main__messages__data__info">
+                      <div class="contents__main__messages__data__info__talker">
+                        ${message.user_name}
+                      </div>
+                      <div class="contents__main__messages__data__info__date">
+                        ${message.created_at}
+                      </div>
+                      </div>
+                      <div class="contents__main__messages__data__text">
+                        <p class="lower-message__content">
+                          ${message.content}
+                          
+                        </p>
+                      </div>
+                      <img src=${message.image} >
+                  </div>`
+      return html;
+    } else{
+      var html = `<div class="contents__main__messages__data">
+                    <div class="contents__main__messages__data__info">
+                      <div class="contents__main__messages__data__info__talker">
+                        ${message.user_name}
+                      </div>
+                      <div class="contents__main__messages__data__info__date">
+                        ${message.created_at}
+                      </div>
+                      </div>
+                      <div class="contents__main__messages__data__text">
+                      <p class="lower-message__content">
+                        ${message.content}
+                        
+                      </p>
 
-                  </div>
-                </div>`
-    return html;
-
+                    </div>
+                  </div>`
+      return html;
+    };
   }
   $('#new_message').on('submit', function(e){
     e.preventDefault();
