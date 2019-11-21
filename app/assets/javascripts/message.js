@@ -1,6 +1,6 @@
 $(function(){
   function buildMessage(message){
-    if (message.content && message.image.url) {
+    if (message.image.url) {
       var html = `<div class="contents__main__messages__data" data-message-id=${message.id}>
                     <div class="contents__main__messages__data__info">
                       <div class="contents__main__messages__data__info__talker">
@@ -13,10 +13,9 @@ $(function(){
                       <div class="contents__main__messages__data__text">
                         <p class="lower-message__content">
                           ${message.content}
-                          
                         </p>
                       </div>
-                        <img src=${message.image} >
+                        <img src=${message.image.url} >
                   </div>`
       return html;
     } else{
@@ -88,10 +87,9 @@ $(function(){
  
      })
      .fail(function() {
-        alert('自動更新に失敗しました');
+        //alert('自動更新に失敗しました');
      });
    };
    setInterval(reloadMessages, 7000);
   
 });
-
