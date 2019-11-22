@@ -10,6 +10,7 @@
         display: flex;
         justify-content: space-between;
         border-bottom: solid 1px #eee;
+          
         
           &__leftbox{
             margin-top: 35px;
@@ -37,6 +38,10 @@
             right: 40px;
             color: #38aef0;
             
+          }
+          &__rightbox a{
+            text-decoration: none;
+            color: #38ae;
           }
       }
 
@@ -82,18 +87,16 @@
     
   
       
-      &__form {
-        display: block;
-        box-sizing: border-box;
+      .form {
         background-color: #DDDDDD;
         box-sizing: border-box;
         height: 90px;
         padding: 20px 50px 20px 40px;
-        .from__message {
+        &__message {
           border: none;
           float: left;
           height: 50px;
-          width: 700px;
+          width: calc(100% - 150px);
         }
         &__mask {
           background-color: $white;
@@ -108,16 +111,16 @@
             display: none;
           }
         }
-          .form__submit {
-            background-color: $light_blue;
-            border: none;
-            color: $white;
-            float: right;
-            font-size: 16px;
-            height: 50px;
-            margin-left: 15px;
-            padding: 0 30px;
-          }
+        &__submit {
+          background-color: $light_blue;
+          border: none;
+          color: $white;
+          float: right;
+          font-size: 16px;
+          height: 50px;
+          margin-left: 15px;
+          padding: 0 30px;
+        }
       }
     }
   }

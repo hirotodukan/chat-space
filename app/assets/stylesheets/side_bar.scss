@@ -24,6 +24,10 @@
         margin-bottom: 40px;
         color: #ffffff;
 
+        &__group a{
+          text-decoration: none;
+        }
+
         &__name{
           width: 260px;
           height: 17px;
@@ -31,9 +35,11 @@
           font-size: 15px;
           color: #ffffff;
         }
+        
 
         &__message{
           font-size: 11px;
+          color: white;
         }
       }
     }
@@ -51,6 +57,13 @@
         font-weight: 700;
         display: flex;
         color: #ffffff;
+        
+        
+            .icon{
+              color: white;
+            }
+        
+        
       }
     }
   }
