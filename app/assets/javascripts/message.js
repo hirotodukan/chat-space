@@ -13,10 +13,10 @@ $(function(){
                       <div class="contents__main__messages__data__text">
                         <p class="lower-message__content">
                           ${message.content}
-                          <img src=${message.image.url} >
+                          
                         </p>
                       </div>
-                        
+                        <img src=${message.image.url} >
                   </div>`
       return html;
     } else{
