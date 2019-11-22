@@ -24,22 +24,21 @@
         margin-bottom: 40px;
         color: #ffffff;
 
-        &__group a{
-          text-decoration: none;
-        }
-
+      
         &__name{
           width: 260px;
           height: 17px;
           margin-bottom: 5px;
           font-size: 15px;
           color: #ffffff;
+          text-decoration: none;
         }
         
 
         &__message{
           font-size: 11px;
           color: white;
+          text-decoration: none;
         }
       }
     }
