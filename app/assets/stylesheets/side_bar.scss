@@ -17,7 +17,7 @@
       height: calc(100vh - 100px);
       overflow: scroll;
       color: #ffffff;
-
+    
       &__group{
         width: 260px;
         height: 39px;
@@ -41,6 +41,10 @@
           text-decoration: none;
         }
       }
+      &__group a{
+        text-decoration: none;
+      }
+      
     }
 
     &__header{
@@ -57,9 +61,15 @@
         display: flex;
         color: #ffffff;
         
+        &__aikon a{
+          text-decoration: none;
+
+        }
+        
         
             .icon{
               color: white;
+              text-decoration: none;
             }
         
         

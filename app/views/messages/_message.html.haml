@@ -3,7 +3,7 @@
     .contents__main__messages__data__info__talker
       = message.user.name
     .contents__main__messages__data__info__date
-      = message.created_at.strftime("%Y/%m/%d %H:%M")
+      = message.created_at.strftime("%Y-%m-%d %H:%M")
   .contents__main__messages__data__text
     - if message.content.present?
       %p.lower-message__content
